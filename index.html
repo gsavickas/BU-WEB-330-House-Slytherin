@@ -1,21 +1,66 @@
 <!-- ============================================
 ; Title:  Functions with parameters
 ; Author: Grayton Savickas, James Pinson, Jonathan Disla
-; Date:   14 Jan 2021
-; Modified By: 
+; Date:   24 Jan 2021
+; Modified By: Jonathan Disla
 ; Description: This is the main HTML for our single page project
 ;=========================================== -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Project</title>
+  <head>
+    <title>Javascript Trivia</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- css and js -->
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="logic.js"></script>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+  </head>
+  <body>
+    
+    <!-- Navigation by James-->
+
+    <!-- End Navigation -->
+
+    <div id="body-wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <ul id="question-list">
+            <span id = "title">Questions</span>
+            
+              <li class="questions"><button>1</button></li>
+              <li class="questions"><button>2</button></li>
+              <li class="questions"><button>3</button></li>
+              <li class="questions"><button>4</button></li>
+              <li class="questions"><button>5</button></li>
+              <li class="questions"><button>6</button></li>
+              <li class="questions"><button>7</button></li>
+              <li class="questions"><button>8</button></li>
+              <li class="questions"><button>9</button></li>
+              <li class="questions"><button>10</button></li>
+          </ul>
+      </div>
+      <!-- End Sidebar -->
+
+      <!-- Question content -->
+      <div id="question-content">
+        <div class="question-title">What symbol defines an array?</div>
+        <br>
+        <ul class="answer-choices">
+          <li><input type="radio" name="" id="">Parenthesis ()</li>
+          <li><input type="radio" name="" id="">Quotes " "</li>
+          <li><input type="radio" name="" id="">Square Brackets [ ]</li>
+          <li><input type="radio" name="" id="">Element Tag < ></li>
+        </ul>
+        <div id="nav-btns">
+          <span class="question-navigation previous">Previous</span>
+          <span class="question-navigation next">Next</span>
+      </div>
+      </div>
+
+    <!-- End Question content -->
+    </div>
+  </body>
 </html>
