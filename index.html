@@ -13,6 +13,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- This is James' import for Quiz -->
+    <meta name="viewport" content="width=device-width"/>
+    <script src="https://unpkg.com/knockout@3.5.1/build/output/knockout-latest.js"></script>
+    <script src="https://unpkg.com/survey-knockout@1.8.30/survey.ko.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+
     <!-- css and js -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -57,7 +65,7 @@
       </div>
       <!-- End Sidebar -->
 
-      <!-- Question content -->
+      <!-- Question content
       <div id="question-content">
         <div class="question-title">What symbol defines an array?</div>
         <br>
@@ -71,7 +79,15 @@
           <span class="question-navigation previous">Previous</span>
           <span class="question-navigation next">Next</span>
       </div>
+      </div> -->
+
+      <div id="question-content">
+        <div id="surveyElement" style="display:inline-block;width:100%;"></div>
+        <div id="surveyResult"></div>
+        <script type="text/javascript" src="./logic.js"></script>
       </div>
+
+
 
     <!-- End Question content -->
 
