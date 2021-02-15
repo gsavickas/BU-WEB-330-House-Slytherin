@@ -89,7 +89,9 @@ body {
   grid-row: 2;
   grid-column: 2;
   justify-self: center;
+  text-align: center;
   padding: 80px 0;
+  width: 100%;
 }
 
 #question-content .question-title {
