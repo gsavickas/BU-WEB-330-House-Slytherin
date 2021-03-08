@@ -11,7 +11,7 @@ Survey
     .StylesManager
     .applyTheme("bootstrap");
 Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
- 
+var finalScore = "";
 var json = {
     title: "JavaScript Quiz",
     showProgressBar: "bottom",
@@ -33,7 +33,10 @@ var json = {
                     name: "expression",
                     title: "What is a JavaScript Expression?",
                     choices: [
-                        "The code talking about it’s feelings", "A phrase of JavaScript that can be evaluated to produce a value. ", "A phrase of JavaScript that offers a solution", "A formula used within JavaScript"
+                        "The code talking about it’s feelings",
+                        "A phrase of JavaScript that can be evaluated to produce a value. ",
+                        "A phrase of JavaScript that offers a solution",
+                        "A formula used within JavaScript"
                     ],
                     correctAnswer: "A phrase of JavaScript that can be evaluated to produce a value. "
                 }
@@ -46,7 +49,10 @@ var json = {
                     title: "What are two types that JavaScript programs can manipulate?'",
                     choicesOrder: "random",
                     choices: [
-                        "Objects and Arrays", "Arrays and Solutions", "Solutions and Objects", "Words and Designs"
+                        "Objects and Arrays",
+                        "Arrays and Solutions",
+                        "Solutions and Objects",
+                        "Words and Designs"
                     ],
                     correctAnswer: "Objects and Arrays"
                 }
@@ -85,7 +91,10 @@ var json = {
                     title: "What is a Date() constructor for?'",
                     choicesOrder: "random",
                     choices: [
-                        "Giving you dating advice", "Creating objects that represent dates and times", "Creating a calendar", "Creating objects that show time and space"
+                        "Giving you dating advice", 
+                        "Creating objects that represent dates and times", 
+                        "Creating a calendar", 
+                        "Creating objects that show time and space"
                     ],
                     correctAnswer: "Creating objects that represent dates and times"
                 }
@@ -158,11 +167,11 @@ var json = {
         }
         
     ],
-    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
+    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>",
 };
  
 window.survey = new Survey.Model(json);
- 
+
 survey
     .onComplete
     .add(function (result) {
@@ -172,3 +181,26 @@ survey
     });
  
   survey.render("surveyElement");
+
+
+// Work in progress to us knockout to show scoring
+//   function resultsModel(){
+//     var self = this;
+
+//     self.count = 0;
+
+//     self.score = function(){
+//         var totalScore = self.count();
+//         if (totalScore > 7){
+//             self.count ="You have learned so much!"
+//         }
+//         else if (totalScore > 5 && totalScore < 7){
+//             self.count = "You have learned some!"
+//         }
+//         else (totalScore <= 5)
+//             self.count = "You have a lot to learn"
+//     }
+//     self.score = ko.observable(count);
+// }
+// console.log(resultsModel.self.count)
+// ko.applyBinding(new resultsModel(), resultsModel)
